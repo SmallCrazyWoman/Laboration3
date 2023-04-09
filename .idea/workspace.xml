@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13fe1f3f-b948-4356-9142-fdd5f92ffc5b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NvsLBPW599gtkEiiDq1DSUfVrx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Neha/OneDrive/Dokument/Testautomatisering/Laboration3&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Cucumber Java.Scenario: Search and access news category">
+    <configuration name="Scenario: Check Sign Language Title" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Laboration3/src/test/java/com/example/Laboration3/resources/Laboration3.feature" />
+      <option name="GLUE" value="com.example.Laboration3" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Laboration3" />
+      <option name="NAME_FILTER" value="^Check Sign Language Title$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check Sign Language Title$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check Sign Language Title" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Check if menu item Program is avaliable" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Laboration3/src/test/java/com/example/Laboration3/resources/Laboration3.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Laboration3" />
+      <option name="NAME_FILTER" value="^Check if menu item Program is avaliable$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check if menu item Program is avaliable$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check if menu item Program is avaliable" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Check if menu item Start is avaliable" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Laboration3/src/test/java/com/example/Laboration3/resources/Laboration3.feature" />
+      <option name="GLUE" value="com.example.Laboration3" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Laboration3" />
+      <option name="NAME_FILTER" value="^Check if menu item Start is avaliable$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check if menu item Start is avaliable$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check if menu item Start is avaliable" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Count number of program categories on SVT Play" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Laboration3/src/test/java/com/example/Laboration3/resources/Laboration3.feature" />
+      <option name="GLUE" value="com.example.Laboration3" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Laboration3" />
+      <option name="NAME_FILTER" value="^Count number of program categories on SVT Play$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Count number of program categories on SVT Play$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Count number of program categories on SVT Play" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Search and access news category" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/Laboration3/src/test/java/com/example/Laboration3/resources/Laboration3.feature" />
+      <option name="GLUE" value="com.example.Laboration3" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Laboration3" />
+      <option name="NAME_FILTER" value="^Search and access news category$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Search and access news category$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Search and access news category" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: Search and access news category" />
+        <item itemvalue="Cucumber Java.Scenario: Check if menu item Start is avaliable" />
+        <item itemvalue="Cucumber Java.Scenario: Check if menu item Program is avaliable" />
+        <item itemvalue="Cucumber Java.Scenario: Check Sign Language Title" />
+        <item itemvalue="Cucumber Java.Scenario: Count number of program categories on SVT Play" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13fe1f3f-b948-4356-9142-fdd5f92ffc5b" name="Changes" comment="" />
+      <created>1680555831684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680555831684</updated>
+    </task>
+    <servers />
+  </component>
+</project>
