@@ -119,13 +119,25 @@ public class StepDefinition {
         WebElement programsLink = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[2]/a"));
         programsLink.click();
     }
-    @Then("Access sign language programs page")
-    public void access_sign_language_programs_page() {
+
+    @Then("Access sign language programs page and check title should be {string}")
+    public void access_sign_language_programs_page_and_check_title_should_be(String actualTitle) {
         WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"__next\"]/div[2]")));
+
+        WebElement programsLink = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[2]/a"));
+        programsLink.click();
+
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"play_main-content\"]/div/section[1]/ul/li[2]/a")));
 
         WebElement signLanguageLink = driver.findElement(By.xpath("//*[@id=\"play_main-content\"]/div/section[1]/ul/li[2]/a"));
         signLanguageLink.click();
+
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"play_main-content\"]/section")));
+        String websiteTitle = driver.getTitle();
+
+        assertEquals(websiteTitle, actualTitle, "Title do not match");
+
     }
 
     @Then("user click news category and pagetitle should be {string}")
@@ -133,10 +145,10 @@ public class StepDefinition {
         WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"__next\"]/div[2]")));
 
-        WebElement searchBar = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[5]/form"));
+        WebElement searchBar = driver.findElement(By.cssSelector("input[name='q']"));
         searchBar.click();
 
-        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[5]/form/input")).sendKeys("nyheter");
+        driver.findElement(By.cssSelector("input[name='q']")).sendKeys("Nyheter");
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[5]/form/button")).click();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"play_main-content\"]/section/div/ul/li[1]/article/a")));
@@ -144,8 +156,7 @@ public class StepDefinition {
         driver.findElement(By.xpath("//*[@id=\"play_main-content\"]/section/div/ul/li[1]/article/a")).click();
 
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("sc-6b1c5b48-1")));
-        WebElement PageTitle = driver.findElement(By.xpath("//*[@id=\"play_main-content\"]/h1/span[2]"));
-        String ActualTitle = PageTitle.getText();
+        String ActualTitle = driver.findElement(By.xpath("//*[@id=\"play_main-content\"]/h1/span[2]")).getText();
 
         assertEquals(ExpectedTitle, ActualTitle, "Text wrong or missing");
 

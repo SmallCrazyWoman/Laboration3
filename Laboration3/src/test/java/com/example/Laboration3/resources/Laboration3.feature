@@ -38,7 +38,7 @@ Feature: Test SVTPlay Website
   Scenario:Access sign language page on SVT Play
     Given menu program is avaliable
     When user press sign language page
-    Then Access sign language programs page
+    Then Access sign language programs page and check title should be "Teckenspråkstolkade program och program på teckenspråk | SVT Play"
 
   Scenario: Search and access news category
     Given Webpage is avaliable
