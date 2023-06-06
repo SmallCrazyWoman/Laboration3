@@ -28,7 +28,7 @@ Feature: Test SVTPlay Website
   Scenario:Count number of program categories on SVT Play
     Given menu program is avaliable
     When user clicks menu item program
-    Then number of categories should be 17
+    Then number of categories should be 16
 
   Scenario:Check Sign Language Title
     Given Webpage is avaliable
@@ -44,3 +44,14 @@ Feature: Test SVTPlay Website
     Given Webpage is avaliable
     When user visits SVT Play
     Then user click news category and pagetitle should be "NYHETER"
+
+  Scenario: Verify contact page is avaliable
+    Given Webpage is avaliable
+    When user visits SVT Play
+    Then user click contact me page and pagetitle should be "Kontakta oss | SVT Kontakt"
+
+  Scenario: Verify contact email address is correct
+    Given Webpage is avaliable
+    When user visits SVT Play contact me page
+    Then Email address should be "kontakt@svt.se"
+

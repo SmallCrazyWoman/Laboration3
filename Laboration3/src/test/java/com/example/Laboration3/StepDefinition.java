@@ -32,7 +32,7 @@ public class StepDefinition {
     public void user_visits_svt_play() {
         driver.get("https://svtplay.se");
         driver.manage().window().maximize();
-        WebElement cookieSettings = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div/div[2]/button[3]"));
+        WebElement cookieSettings = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[3]/div[2]/div/div/div/div[2]/button[3]"));
         cookieSettings.click();
     }
 
@@ -75,10 +75,10 @@ public class StepDefinition {
         driver = new ChromeDriver(options);
         driver.get("https://svtplay.se");
         driver.manage().window().maximize();
-        WebElement cookieSettings = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div/div[2]/button[3]"));
+        WebElement cookieSettings = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[3]/div[2]/div/div/div/div[2]/button[3]"));
         cookieSettings.click();
         WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"__next\"]/div[2]")));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@id=\"__next\"]/div[3]/div[2]/div/div")));
 
     }
 
@@ -91,7 +91,7 @@ public class StepDefinition {
     @Then("number of categories should be {int}")
     public void number_of_categories_should_be(int categorySize) {
         WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("sc-3b830fc0-0")));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("sc-6fed8d5f-0")));
         List<WebElement> menuItems = driver.findElements(By.className("sc-a9073dc0-0"));
         assertEquals(categorySize, menuItems.size(), "antalet länkar är inte korrekt");
     }
@@ -118,6 +118,8 @@ public class StepDefinition {
 
         WebElement programsLink = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/header/div[2]/div/div/nav/ul/li[2]/a"));
         programsLink.click();
+
+
     }
 
     @Then("Access sign language programs page and check title should be {string}")
@@ -161,6 +163,36 @@ public class StepDefinition {
         assertEquals(ExpectedTitle, ActualTitle, "Text wrong or missing");
 
     }
+    @Then("user click contact me page and pagetitle should be {string}")
+    public void user_click_contact_me_page_and_pagetitle_should_be(String ExpectedTitle) {
+        WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/footer/div/div[3]/a[2]")).click();
+
+        driver.findElement(By.xpath("//*[@id=\"blocks\"]/div[2]/div/div/a[1]")).click();
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div[2]/main/div/div/div[1]/h1")));
+        String actualTitle = driver.getTitle();
+
+        assertEquals(ExpectedTitle, actualTitle, "Title do not match");
+    }
+
+    @When("user visits SVT Play contact me page")
+    public void user_visits_svt_play_contact_me_page() {
+        driver.get("https://svtplay.se");
+        driver.manage().window().maximize();
+        WebElement cookieSettings = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[3]/div[2]/div/div/div/div[2]/button[3]"));
+        cookieSettings.click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/div/footer/div/div[3]/a[2]")).click();
+        driver.findElement(By.xpath("//*[@id=\"blocks\"]/div[2]/div/div/a[1]")).click();
+    }
+    @Then("Email address should be {string}")
+    public void email_address_should_be(String email) {
+        WebDriverWait wait = new WebDriverWait(driver, ofSeconds(30));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//*[@id=\"__next\"]/div[2]/main/div/div/div[2]/img")));
+        String actualEmail = driver.findElement(By.xpath("//*[@id=\"blocks\"]/div[1]/div/div/div/p[1]/a")).getText();
+
+        assertEquals(email, actualEmail, "Email address is incorrect");
+    }
+
 
 }
 
